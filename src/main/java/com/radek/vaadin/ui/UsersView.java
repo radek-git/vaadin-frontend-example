@@ -40,7 +40,8 @@ public class UsersView extends VerticalLayout {
         binder.setBean(user);
 
         Button save = new Button("save", click -> {
-            Notification.show("Valid: " + binder.isValid(), 6000, Notification.Position.BOTTOM_CENTER);
+            Notification.show("Valid: " + binder.isValid(), 6000,
+                    Notification.Position.BOTTOM_CENTER);
             userService.add(user);
         });
 
